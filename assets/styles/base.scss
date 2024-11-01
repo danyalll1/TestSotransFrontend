@@ -1,0 +1,24 @@
+@use "mixins/breakpoint_mixins" as *;
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: var(--black);
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  outline: none;
+}
+
+nav, footer, header, aside{
+  display: block
+}
+
+.container{
+  max-width: 1440px;
+  padding: 0 112px;
+  margin: 0 auto;
+  @include xs-breakpoint(){
+    padding: 16px;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../vars/vars" as *;
+
+@mixin fontFamily($_family, $_name, $_weight, $_style: normal){
+  font-family: '#{$_family}';
+  src: local('#{$_name}');
+  src: url('~/assets/fonts/#{$_name}.woff2') format('woff2'),  url('~/assets/fonts/#{$_name}.woff') format('woff');
+  font-weight: $_weight;
+  font-style: $_style;
+  font-display: swap;
+}
+
+@mixin font($_fontSize, $_lineHeight, $_fontWeight: 400, $_fontFamily: $font){
+  font-weight: $_fontWeight;
+  font-size: $_fontSize;
+  line-height: $_lineHeight;
+  font-family: $_fontFamily;
+}
+

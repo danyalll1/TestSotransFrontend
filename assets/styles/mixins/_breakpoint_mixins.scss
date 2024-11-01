@@ -1,0 +1,9 @@
+@use "../vars/vars" as *;
+
+@mixin xs-breakpoint(){
+  @media only screen and (max-width: $xsBreakpoint){
+    @content
+  }
+}
+
+

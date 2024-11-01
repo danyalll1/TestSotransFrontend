@@ -1,0 +1,22 @@
+$font: 'Druk Wide Cyr', sans-serif;
+$font2: 'Nunito Sans', sans-serif;
+$font3: 'Druk Cyr', sans-serif;
+$font4: 'Montserrat', sans-serif;
+
+//breakpoints
+$xsBreakpoint : 375px;
+
+//colors
+
+:root{
+  --bg: #FFFFFF;
+  --blue : #0267FF;
+  --pink: #F269AF;
+  --purple: #A66EFF;
+  --purple-dark: #5834A4;
+  --green: #ABEC20;
+  --black: #000000;
+  --orange: #F55E1D;
+  --gradient:  linear-gradient(90deg, #FDF398 100%,#F7BE87 100%,#E5637D 100%, #E84BBA 100%, #9310D8 100%);
+}
+
