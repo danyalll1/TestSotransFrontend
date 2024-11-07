@@ -16,7 +16,7 @@ type TBaseListItem = {
 
 const { data, error } = useFetch<ICharachtrers>('https://rickandmortyapi.com/api/character')
 const baseList = ref<TBaseListItem[]>([])
-const lists = ref({})
+
 const filteredBaseList = computed(()=>{
   return baseList.value.filter((el)=> {
     return el.list === 0
@@ -37,13 +37,14 @@ const listsArray = computed(() => {
 })
 
 if (data.value) {
-  const firstFour = data.value.results.slice(0, 4).map(({ image, id }) => ({
+  const randomNumber = Math.floor(Math.random() * 21)
+  const firstFour = data.value.results.slice(randomNumber-4, randomNumber).map(({ image, id }) => ({
     image,
     id,
     list: 0
   }))
 
-  const secondFour = data.value.results.slice(0, 4).map(({ name, id }) => ({
+  const secondFour = data.value.results.slice(randomNumber-4, randomNumber).map(({ name, id }) => ({
     name,
     id,
     list: 0
@@ -125,6 +126,7 @@ const checkLists = computed(() => {
         </div>
       </div>
     </div>
+
     <div class="agreement" :class="{active : checkLists}">
       Всё верно, Вабалабадабдаб
     </div>
